@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <!-- Incluindo Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <a class="navbar-brand" href="/">Áreas do Conhecimento</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/professores/">Professores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/estudantes/">Estudantes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/coordenadores/">Coordenadores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/diretores/">Diretores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/instituicoes/">Instituições de Ensino</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/areas/">Áreas do Saber</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/cursos/">Cursos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/periodos/">Períodos de Curso</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/disciplinas/">Disciplinas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/matriculas/">Matrículas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/avaliacoes/">Avaliações</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/frequencias/">Frequências</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/turmas/">Turmas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/cidades/">Cidades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/ocorrencias/">Ocorrências</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/disciplinas_por_curso/">Disciplinas por Curso</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/tipos_de_avaliacao/">Tipos de Avaliação</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2 class="mb-4">Áreas do Conhecimento</h2>
+        <ul class="list-group">
+            {% for area in areas %}
+            <li class="list-group-item">{{ area.nome }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <!-- Incluindo jQuery e Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
